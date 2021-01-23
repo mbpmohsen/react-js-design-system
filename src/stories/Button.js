@@ -1,29 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './button.css';
+import Proptypes from "prop-types";
+import {Loading} from "./Loading";
 
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Button = ({backgroundColor, size, children, color, block, outline, loading, ...props}) => {
+  const outlineMode = outline ? `button--outline-` : '';
+  const blockMode = block ? `button-block` : '';
+  const textColor = outline ? '' : (color === `light` || color === `angle`) ? `color-devil` : `color-light`;
+  const loadingColor = (color === `light` || color === `angle`);
+  const buttonColor = outline ? `button-outline--${color}` : `bg-${color}`;
+  const buttonSize = outline ? `button-outline--${size}` : `button--${size}`;
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
+      <button
+          type="button"
+          className={['button', buttonSize, buttonColor, textColor, outlineMode, blockMode].join(' ')}
+          style={backgroundColor && {backgroundColor}}
+          {...props}
+      >
+        {loading ? <Loading dark={loadingColor}/> : children}
+      </button>
   );
 };
 
 Button.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
   /**
    * What background color to use
    */
@@ -31,20 +34,43 @@ Button.propTypes = {
   /**
    * How large should the button be?
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
   /**
    * Button contents
    */
-  label: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   /**
    * Optional click handler
    */
   onClick: PropTypes.func,
+  /**
+   * Background color
+   */
+  color: Proptypes.oneOf([`devil`, `dark`, `angle`, `light`, `violets`, `orange`, `ocean`, `flamingo`, `leaf`, `sky`, `lemon`, `tomato`]),
+  /**
+   * Enable width 100%
+   */
+  block: Proptypes.bool,
+  /**
+   * Enable outline
+   */
+  outline: Proptypes.bool,
+  /**
+   * Enable loading and Disable All event
+   */
+  loading: Proptypes.bool,
+  /**
+   * Disable button
+   */
 };
 
 Button.defaultProps = {
   backgroundColor: null,
-  primary: false,
-  size: 'medium',
+  size: `md`,
   onClick: undefined,
+  color: `ocean`,
+  block: false,
+  outline: false,
+  loading: false,
+  disable: false,
 };

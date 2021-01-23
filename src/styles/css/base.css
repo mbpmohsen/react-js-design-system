@@ -1,0 +1,100 @@
+/*Background colors*/
+.bg-ocean {
+  background-color: var(--ocean);
+}
+
+.bg-devil {
+  background-color: var(--devil);
+}
+
+.bg-dark {
+  background-color: var(--dark);
+}
+
+.bg-angle {
+  background-color: var(--angle);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.bg-violets {
+  background-color: var(--violets);
+}
+
+.bg-orange {
+  background-color: var(--orange);
+}
+
+.bg-flamingo {
+  background-color: var(--flamingo);
+}
+
+.bg-leaf {
+  background-color: var(--leaf);
+}
+
+.bg-sky {
+  background-color: var(--sky);
+}
+
+.bg-lemon {
+  background-color: var(--lemon);
+}
+
+.bg-tomato {
+  background-color: var(--tomato);
+}
+
+/*Text colors*/
+.color-ocean {
+  color: var(--ocean);
+}
+
+.color-devil {
+  color: var(--devil);
+}
+
+.color-dark {
+  color: var(--dark);
+}
+
+.color-angle {
+  color: var(--angle);
+}
+
+.color-light {
+  color: var(--light);
+}
+
+.color-violets {
+  color: var(--violets);
+}
+
+.color-orange {
+  color: var(--orange);
+}
+
+.color-flamingo {
+  color: var(--flamingo);
+}
+
+.color-leaf {
+  color: var(--leaf);
+}
+
+.color-sky {
+  color: var(--sky);
+}
+
+.color-lemon {
+  color: var(--lemon);
+}
+
+.color-tomato {
+  color: var(--tomato);
+}
+.cursor-pointer {
+  cursor: pointer;
+}

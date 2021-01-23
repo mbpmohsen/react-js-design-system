@@ -1,0 +1,17 @@
+.card-text {
+  font-family: iransans,sans-serif;
+  font-size: 1rem;
+  color: var(--dark);
+  direction: rtl;
+  padding: 15px;
+  text-align: justify;
+}
+.card-img {
+  width: 100%;
+}
+.img-top-radius {
+  border-radius: 10px 10px 0 0;
+}
+.img-radius {
+  border-radius: 10px;
+}

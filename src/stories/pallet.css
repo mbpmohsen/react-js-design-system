@@ -1,0 +1,17 @@
+@import "../styles/css/main.css";
+.pallet-box {
+  border-radius: 0.625rem;
+  padding: 15px 20px;
+  display: flex;
+}
+.pallet-text {
+  font-family: sans-serif;
+  padding: 10px 40px;
+  background-color: var(--light);
+  color: var(--devil);
+  border-radius: 10px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}

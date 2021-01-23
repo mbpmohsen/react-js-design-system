@@ -1,30 +1,117 @@
-.storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+.button {
+  font-family: iransans, serif;
   font-weight: 700;
-  border: 0;
-  border-radius: 3em;
+  border-radius: .55rem;
   cursor: pointer;
   display: inline-block;
   line-height: 1;
+  border: none;
+  outline: none;
 }
-.storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
-}
-.storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-}
-.storybook-button--small {
+
+.button--sm {
   font-size: 12px;
   padding: 10px 16px;
 }
-.storybook-button--medium {
+
+.button--md {
   font-size: 14px;
   padding: 11px 20px;
 }
-.storybook-button--large {
+
+.button--lg {
   font-size: 16px;
-  padding: 12px 24px;
+  padding: 15px 27px;
+}
+
+.button-outline--sm {
+  font-size: 12px;
+  padding: 7px 13px;
+}
+
+.button-outline--md {
+  font-size: 14px;
+  padding: 8px 17px;
+}
+
+.button-outline--lg {
+  font-size: 16px;
+  padding: 9px 21px;
+}
+
+.button-block {
+  width: 100%;
+}
+
+/*Outline colors*/
+.button-outline--ocean {
+  background-color: var(--light);
+  color: var(--ocean);
+  border: 3px solid var(--ocean);
+}
+
+.button-outline--devil {
+  background-color: var(--light);
+  color: var(--devil);
+  border: 3px solid var(--devil);
+}
+
+.button-outline--dark {
+  background-color: var(--light);
+  color: var(--dark);
+  border: 3px solid var(--dark);
+}
+
+.button-outline--angle {
+  background-color: var(--light);
+  color: var(--angle);
+  border: 3px solid var(--angle);
+}
+
+.button-outline--light {
+  background-color: var(--light);
+  color: var(--light);
+  border: 3px solid var(--light);
+}
+
+.button-outline--violets {
+  background-color: var(--light);
+  color: var(--violets);
+  border: 3px solid var(--violets);
+}
+
+.button-outline--orange {
+  background-color: var(--light);
+  color: var(--orange);
+  border: 3px solid var(--orange);
+}
+
+.button-outline--flamingo {
+  background-color: var(--light);
+  color: var(--flamingo);
+  border: 3px solid var(--flamingo);
+}
+
+.button-outline--leaf {
+  background-color: var(--light);
+  color: var(--leaf);
+  border: 3px solid var(--leaf);
+}
+
+.button-outline--sky {
+  background-color: var(--light);
+  color: var(--sky);
+  border: 3px solid var(--sky);
+}
+
+.button-outline--lemon {
+  background-color: var(--light);
+  color: var(--lemon);
+  border: 3px solid var(--lemon);
+}
+
+.button-outline--tomato {
+  background-color: var(--light);
+  color: var(--tomato);
+  border: 3px solid var(--tomato);
 }
