@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Badge} from './Badge';
 
 export default {
@@ -9,8 +8,4 @@ export default {
 
 const Template = (args) => <Badge {...args} />;
 
-export const oceanBadge = Template.bind({});
-oceanBadge.args = {
-    label: 'دکمه',
-    color: `ocean`
-};
+export const Ocean = () => <Badge color={`ocean`}>فعال</Badge>
