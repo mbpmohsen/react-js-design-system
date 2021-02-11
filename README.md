@@ -11,7 +11,7 @@ In the project directory, you can run:
 ### `npm run storybook`
 
 Runs the design system in the localhost.\
-Open [http://localhost:3000](http://localhost:6006) to view it in the browser.
+Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 
 ### `npm run build-storybook`
 
