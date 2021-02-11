@@ -1,17 +1,16 @@
 import React from "react";
 import * as PropTypes from "prop-types";
 import './input.css';
-import {useRandomId} from "../utils/customHooks/useRandomId";
 
-export const Input = ({type, onChange, label, feedback, invalidFeedback, size, value, focus, ...htmlAttributes}) => {
+export const Input = ({type, onChange, label, feedback, invalidFeedback, size, value, name, focus, ...htmlAttributes}) => {
     const inputSize = 'input--' + size;
     const textSize = 'text--' + size;
-    const id = useRandomId(16);
+    // const id = useRandomId(16);
     const invalidInput = invalidFeedback ? `invalid-input` : '';
     return (
         <div className={`input-box`}>
-            {label && <label className={[`label`, textSize].join(' ')} htmlFor={id}>{label}</label>}
-            <input type={type} className={[`input`, inputSize, invalidInput].join(' ')} id={id} value={value}
+            {label && <label className={[`label`, textSize].join(' ')} htmlFor={name}>{label}</label>}
+            <input type={type} className={[`input`, inputSize, invalidInput].join(' ')} id={name} value={value}
                    onChange={v => onChange(v)} autoFocus={focus} {...htmlAttributes}/>
             {feedback && <span className={['feedback', textSize].join(' ')}>{feedback}</span>}
             {invalidFeedback && <span className={['invalid-feedback', textSize].join(' ')}>{invalidFeedback}</span>}
@@ -27,6 +26,7 @@ Input.prototype = {
     size: PropTypes.oneOf(['sm', 'md', 'lg']),
     value: PropTypes.string,
     focus: PropTypes.bool,
+    name: PropTypes.string
 }
 Input.defaultProps = {
     type: `sm`,
@@ -37,4 +37,5 @@ Input.defaultProps = {
     size: `sm`,
     value: null,
     focus: false,
+    name: null
 }
