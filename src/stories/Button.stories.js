@@ -51,6 +51,7 @@ export const outlineLemon =  () => <Button color={`lemon`} outline>دکمه</But
 export const outlineTomato =  () => <Button color={`tomato`} outline>دکمه</Button>
 
 export const Block =  () => <Button color={`ocean`} size={`lg`} block>دکمه</Button>
+
 export const BlockOutline =  () => <Button color={`ocean`} size={`lg`} block outline>دکمه</Button>
 
 export const Loading =  () => <Button color={`ocean`} loading outlin>دکمه</Button>

@@ -42,10 +42,10 @@ export const multipleSelectDropdown = () => <div style={{width: 400, float: 'rig
                                              helper="حداقل یک آیتم را انتخاب کنید"
                                              toggleItem={v => console.log("toggleItem", v)}
                                              size={`sm`}
-                                             defaultItems={[]}/></div>
+                                             /></div>
 
 export const singleSelectDropdown = () => <div style={{width: 400, float: 'right'}}><Dropdown items={INITIAL_ITEM} label="انتخاب کنید"
                                                                   helper="حداقل یک آیتم را انتخاب کنید"
                                                                   toggleItem={v => console.log("toggleItem", v)}
                                                                   size={`sm`}
-                                                                  defaultItems={[]}/></div>
+                                                                  /></div>
