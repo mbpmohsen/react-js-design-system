@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './button.css';
-import Proptypes from "prop-types";
 import {Loading} from "./Loading";
 
 /**
@@ -46,19 +45,19 @@ Button.propTypes = {
   /**
    * Background color
    */
-  color: Proptypes.oneOf([`devil`, `dark`, `angle`, `light`, `violets`, `orange`, `ocean`, `flamingo`, `leaf`, `sky`, `lemon`, `tomato`]),
+  color: PropTypes.oneOf([`devil`, `dark`, `angle`, `light`, `violets`, `orange`, `ocean`, `flamingo`, `leaf`, `sky`, `lemon`, `tomato`]),
   /**
    * Enable width 100%
    */
-  block: Proptypes.bool,
+  block: PropTypes.bool,
   /**
    * Enable outline
    */
-  outline: Proptypes.bool,
+  outline: PropTypes.bool,
   /**
    * Enable loading and Disable All event
    */
-  loading: Proptypes.bool,
+  loading: PropTypes.bool,
   /**
    * Disable button
    */

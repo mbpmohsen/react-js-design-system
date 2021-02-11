@@ -1,0 +1,122 @@
+.dropdown-wrapper {
+    width: 100%;
+    font-family: iransans, sans-serif;
+    direction: rtl;
+}
+
+.arrow-up {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+.arrow-down {
+    transform: rotate(0deg);
+    transition: 0.3s;
+}
+
+.dropdown {
+    outline: none;
+    border: 1px solid var(--gray);
+    background-color: white;
+    border-radius: .55rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    cursor: pointer;
+    user-select: none;
+}
+
+.dropdown--label {
+    text-align: start;
+    font-family: iransans, sans-serif;
+    margin-bottom: 0;
+}
+
+.dropdown-list--item {
+    outline: none;
+    background-color: white;
+    width: 100%;
+    border: none;
+    direction: rtl;
+    text-align: start;
+    margin: 6px 0 0;
+    font-family: iransans, sans-serif;
+}
+
+.scroll-list {
+    margin-top: 16px;
+    border: 1px solid var(--gray);
+    border-radius: .55rem;
+    /*position: absolute;*/
+    z-index: 100;
+    background-color: white;
+    max-height: 40vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.search-box {
+    position: relative;
+    margin-top: 16px;
+}
+
+.search-input {
+    width: -webkit-fill-available;
+    border: 1px solid var(--gray);
+    outline: none;
+    border-radius: .55rem;
+    height: 28px;
+    font-family: iransans, sans-serif;
+    color: var(--neutral);
+    font-size: 14px;
+    text-indent: 10px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.helper {
+    text-align: start;
+    margin-top: 6px;
+}
+
+.item-text {
+    cursor: pointer;
+}
+
+.multiple-box {
+    display: flex;
+    font-family: iransans, sans-serif;
+}
+
+.multiple-picked {
+    background-color: var(--gray);
+    border-radius: .55rem;
+    padding: 0 9px;
+    margin: 0 6px;
+}
+
+.single-picked {
+    font-family: iransans, sans-serif;
+
+}
+
+.dropdown-menu {
+    position: relative;
+}
+
+.dropdown--sm {
+    padding: 10px 16px;
+}
+
+.dropdown--md {
+    padding: 11px 20px;
+}
+
+.dropdown--lg {
+    padding: 15px 27px;
+}
+
