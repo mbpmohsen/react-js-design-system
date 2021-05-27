@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from "react";
-import {arrowIcon, searchIcon} from "../styles/img/icons";
-import {Checkbox} from "./Checkbox";
-import {Loading} from "./Loading";
+import {arrowIcon, searchIcon} from "../../styles/img/icons";
+import {Checkbox} from "../Checkbox/Checkbox";
+import {Loading} from "../Loading/Loading";
 import PropTypes from "prop-types";
 import "./dropdown.css";
 

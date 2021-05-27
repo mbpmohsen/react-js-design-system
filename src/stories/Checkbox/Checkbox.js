@@ -1,6 +1,6 @@
 import React from "react";
 import './checkbox.css';
-import {useRandomId} from "../utils/customHooks/useRandomId";
+import {useRandomId} from "../../utils/customHooks/useRandomId";
 import PropTypes from "prop-types";
 
 export const Checkbox = ({onChange, size, label, disabled, ...htmlAttributes}) => {
