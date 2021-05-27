@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./radio.css";
-import {useRandomId} from "../utils/customHooks/useRandomId";
+import {useRandomId} from "../../utils/customHooks/useRandomId";
 
 export const RadioButton = ({label, name, size, onChange, disabled, ...htmlAttribute}) => {
     const randomId = useRandomId(16);

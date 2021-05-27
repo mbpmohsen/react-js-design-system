@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card} from './Card';
-import cat from '../styles/img/Cat.jpg';
-import '../styles/css/dmeo.css';
+import cat from '../../styles/img/Cat.jpg';
+import '../../styles/css/dmeo.css';
 
 export default {
     title: 'Example/Card',

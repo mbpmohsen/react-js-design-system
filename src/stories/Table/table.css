@@ -1,0 +1,45 @@
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+    vertical-align: top;
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+
+thead {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    vertical-align: bottom;
+}
+
+tbody, td, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+
+tbody > tr {
+    border-bottom: 1px solid #E0E0E0;
+    cursor: pointer;
+}
+
+tbody > tr:hover {
+    background-color: #f3f1f1;
+}
+
+
+tbody > tr > td, thead > tr > th {
+    padding: 0.5rem;
+}
+
+th {
+    text-align: inherit;
+    text-align: -webkit-match-parent;
+}
+
+tbody {
+    vertical-align: inherit;
+}
+
+
