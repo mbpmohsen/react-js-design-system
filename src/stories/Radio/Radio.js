@@ -3,6 +3,16 @@ import PropTypes from "prop-types";
 import "./radio.css";
 import {useRandomId} from "../../utils/customHooks/useRandomId";
 
+/**
+ * Only one radio button in a group can be selected at the same time.
+ * @param {function} onChange
+ * @param {string} size
+ * @param {string} label
+ * @param {boolean} disabled
+ * @param {unknown} htmlAttributes
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const RadioButton = ({label, name, size, onChange, disabled, ...htmlAttribute}) => {
     const randomId = useRandomId(16);
     return (

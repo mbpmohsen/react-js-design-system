@@ -4,7 +4,17 @@ import './button.css';
 import {Loading} from "../Loading/Loading";
 
 /**
- * Primary UI component for user interaction
+ * Button include size, color, outline and loading,...
+ * @param {string} backgroundColor - One of the template colors
+ * @param {string} size - One of the  sm, md, lg
+ * @param {unknown} children - Anything assign to button
+ * @param {string} color  -  One of the template colors
+ * @param {boolean} block - With 100%
+ * @param {boolean} outline - Outline mode
+ * @param {boolean} loading - Button is Loading and disabled
+ * @param {unknown} props - Any assigned attribute
+ * @returns {JSX.Element}
+ * @constructor
  */
 export const Button = ({backgroundColor, size, children, color, block, outline, loading, ...props}) => {
   const outlineMode = outline ? `button--outline-` : '';

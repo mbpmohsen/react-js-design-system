@@ -4,6 +4,26 @@ This project was bootstrapped with [Mohsen babaei](https://github.com/mbpmohsen)
 
 ![alt text](./src/styles/img/demo.png)
 
+## Usage
+You can use this package like any other packages:
+
+### `npm run build-storybook`
+First you must run this command, After executing this command, it will give you a built-in version.
+
+### `npm pack`
+Now by executing this command, it will give you a *.tgz file that you can put in your project.
+
+You can use it by adding the link of this package inside the package.json :
+
+```json
+  "dependencies": {
+    "design-system": "file: ./react-design-system-0.1.0.tgz"
+  },
+```
+Now, after executing the `npm install` or `npm install design-system` command, you can use it anywhere in the project.
+
+Enjoy it 🙂.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -32,3 +52,25 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Technical documents
+
+You can use the following documents to better understand the code for developing or editing system design:<br/>
+[Badge](./src/stories/Badge/Badge.md)<br/>
+
+[Button](./src/stories/Button/Button.md)<br/>
+
+[Card](./src/stories/Card/Card.md)<br/>
+
+[Checkbox](./src/stories/Checkbox/Checkbox.md)<br/>
+
+[Dropdown](./src/stories/Dropdown/Dropdown.md)<br/>
+
+[Input](./src/stories/Input/Input.md)<br/>
+
+[Loading](./src/stories/Loading/Loading.md)<br/>
+
+[Progress](./src/stories/Progress/Progress.md)<br/>
+
+[Radio](./src/stories/Radio/Radio.md)<br/>
+
+[Table](./src/stories/Table/Table.md)<br/>
