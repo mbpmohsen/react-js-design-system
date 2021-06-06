@@ -3,6 +3,13 @@ import PropTypes from "prop-types"
 import Proptypes from "prop-types";
 import "./progress.css";
 
+/**
+ * Progress bar
+ * @param {number} status - Number of range
+ * @param color - One of the template colors
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const Progress = ({status, color}) => {
 
     return (

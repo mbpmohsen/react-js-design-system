@@ -2,6 +2,21 @@ import React from "react";
 import * as PropTypes from "prop-types";
 import './input.css';
 
+/**
+ * Input component:
+ * @param {string} type -text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color.
+ * @param {function} onChange - Show onChange
+ * @param {string} label - label for input
+ * @param {string} feedback - Show help
+ * @param {string} invalidFeedback - Show error
+ * @param {string} size - One of sm, md, lg
+ * @param {unknown} value - Input value
+ * @param {string} name - Input name
+ * @param {boolean} focus - autofocus
+ * @param {unknown} htmlAttributes
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const Input = ({type, onChange, label, feedback, invalidFeedback, size, value, name, focus, ...htmlAttributes}) => {
     const inputSize = 'input--' + size;
     const textSize = 'text--' + size;

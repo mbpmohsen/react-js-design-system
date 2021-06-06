@@ -5,6 +5,20 @@ import {Loading} from "../Loading/Loading";
 import PropTypes from "prop-types";
 import "./dropdown.css";
 
+/**
+ * A dropdown menu is a toggleable menu that allows the user to choose one value from a predefined list
+ * @param {array} items - array include id, title and some one
+ * @param {boolean} multiple - User can be select multiple item
+ * @param {string} label - Label for dropdown
+ * @param {string} helper - Show helper message
+ * @param {string} err - Show invalid feedback
+ * @param {boolean} searchable - Show input for search between items
+ * @param {function} toggleItem - Callback selected item
+ * @param {string} size - one of the xs, sm, lg
+ * @param {boolean} loading - show loading
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const Dropdown = ({
                              items,
                              multiple,
@@ -26,6 +40,10 @@ export const Dropdown = ({
     if (multipleSelect)
         toggleItem(multipleSelect)
 
+    /**
+     * Show selected item in dropdown
+     * @returns {JSX.Element|unknown[]}
+     */
     function multipleSelected() {
         let length = multipleSelect.length;
         if (length < 3) {
@@ -43,12 +61,21 @@ export const Dropdown = ({
         }
     }
 
+    /**
+     * Show selected item close dropdown
+     * @param {unknown} obj
+     */
     function singlePicked(obj) {
         toggleItem([obj]);
         setSingleSelect(obj);
         dispatchFlag(!flag);
     }
 
+    /**
+     *
+     * @param {boolean} sts - If is true, add to selected list else removed from them
+     * @param {unknown} obj
+     */
     function multiplePicked(sts, obj) {
         if (sts)
             setMultipleSelect(es => es.concat(obj));
@@ -56,6 +83,10 @@ export const Dropdown = ({
             setMultipleSelect(multipleSelect.filter(item=> item.id !== obj.id))
     }
 
+    /**
+     * Generate single mode list
+     * @returns {unknown[]}
+     */
     function singleListItems() {
         return (items.map((item, index) => (
             <button key={index} className={['dropdown-list--item', size].join(" ")} type="button"
@@ -65,6 +96,10 @@ export const Dropdown = ({
         )))
     }
 
+    /**
+     * Generate multiple mode list
+     * @returns {unknown[]}
+     */
     function multipleListItems() {
         return (items.map((item, index) => (
             <button key={index} className={['dropdown-list--item', size].join(" ")} type="button">
@@ -73,10 +108,17 @@ export const Dropdown = ({
         )))
     }
 
+    /**
+     * Open/Close list
+     */
     function toggleList() {
         dispatchFlag(!flag)
     }
 
+    /**
+     * Filter item from list
+     * @param {string} v
+     */
     function filterFunction(v) {
         for (let value of listItemsRef.current.children) {
             let txtContent = value.textContent;
@@ -88,6 +130,10 @@ export const Dropdown = ({
         }
     }
 
+    /**
+     * In component did mount set selected items
+     * @param {array} items
+     */
     function setDefaultItems(items) {
         for (let item of Object.values(items)) {
             console.log("Item", item)

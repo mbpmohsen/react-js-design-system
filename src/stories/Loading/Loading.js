@@ -2,6 +2,12 @@ import React from "react";
 import './loading.css';
 import Proptypes from "prop-types";
 
+/**
+ * Loading css
+ * @param {boolean}  dark
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const Loading = ({dark}) => {
     const color = dark ? `ellipsis-color-dark` : `ellipsis-color-light`;
     return (
